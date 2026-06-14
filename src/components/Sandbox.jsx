@@ -386,6 +386,50 @@ export default function Sandbox({ initialConfig, additionalFiles = {}, missionTi
                               </select>
                             </div>
                           )}
+                          {/* Knowledge Base Input for Day 3 */}
+                          {cfg.knowledge_base !== undefined && (
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+                              <label>Knowledge Base (知識庫，多檔案以逗號分隔)</label>
+                              <input 
+                                type="text" 
+                                value={Array.isArray(cfg.knowledge_base) ? cfg.knowledge_base.join(', ') : ''} 
+                                onChange={e => {
+                                  const arr = e.target.value.split(',').map(s => s.trim()).filter(Boolean);
+                                  updateConfig('knowledge_base', arr);
+                                }} 
+                                placeholder="例如: refund_policy.md, company_policy.pdf"
+                                style={{ background: '#333', border: '1px solid #555', color: '#fff', padding: '6px', borderRadius: '4px' }} 
+                              />
+                            </div>
+                          )}
+                          {/* Enabled Tools Checkboxes for Day 4-7 */}
+                          {(cfg.enabled_tools !== undefined || cfg.tools !== undefined) && (
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                              <label>Enabled Tools (啟用的工具)</label>
+                              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', background: 'rgba(0,0,0,0.2)', padding: '10px', borderRadius: '6px', border: '1px solid #444' }}>
+                                {['get_weather', 'calculator', 'search_web', 'send_email'].map(tool => {
+                                  const key = cfg.enabled_tools !== undefined ? 'enabled_tools' : 'tools';
+                                  const isChecked = Array.isArray(cfg[key]) && cfg[key].includes(tool);
+                                  return (
+                                    <label key={tool} style={{ display: 'flex', alignItems: 'center', gap: '6px', cursor: 'pointer', fontSize: '12px', userSelect: 'none' }}>
+                                      <input 
+                                        type="checkbox" 
+                                        checked={isChecked}
+                                        onChange={e => {
+                                          const currentTools = cfg[key] || [];
+                                          const newTools = e.target.checked 
+                                            ? [...new Set([...currentTools, tool])]
+                                            : currentTools.filter(t => t !== tool);
+                                          updateConfig(key, newTools);
+                                        }}
+                                      />
+                                      <code>{tool}</code>
+                                    </label>
+                                  );
+                                })}
+                              </div>
+                            </div>
+                          )}
                           <div style={{ display: 'flex', flexDirection: 'column', gap: '4px', flex: 1 }}>
                             <label>System Prompt (系統提示詞)</label>
                             <textarea value={cfg.system_prompt || ''} onChange={e => updateConfig('system_prompt', e.target.value)} style={{ background: '#333', border: '1px solid #555', color: '#fff', padding: '8px', borderRadius: '4px', flex: 1, minHeight: '100px', resize: 'vertical' }} />
