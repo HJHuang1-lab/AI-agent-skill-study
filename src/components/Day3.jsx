@@ -324,6 +324,26 @@ export default function Day3() {
               <li><strong>短期記憶：</strong>藉由傳遞歷史對話紀錄 (History Array)，讓 Agent 具備對話連貫性。</li>
               <li><strong>長期記憶 (<Tooltip text="檢索增強生成">RAG</Tooltip>)：</strong>面對龐大的企業知識庫，透過<Tooltip text="檢索增強生成">檢索增強生成 (RAG)</Tooltip> 尋找相關碎片並注入 Prompt，是突破 <Tooltip text="AI 的短期記憶容量">Context Window</Tooltip> 限制的最佳解法。</li>
             </ul>
+            <div style={{ marginTop: '20px', paddingTop: '16px', borderTop: '1px dashed var(--border-color)' }}>
+              <strong style={{ color: 'var(--text-primary)', fontSize: '0.95rem' }}>📖 延伸閱讀 (推薦繁體中文資源)</strong>
+              <ul style={{ margin: '8px 0 0 0', paddingLeft: '20px', fontSize: '0.9rem', lineHeight: '1.6', display: 'flex', flexDirection: 'column', gap: '6px' }}>
+                <li>
+                  <a href="https://aws.amazon.com/tw/what-is/retrieval-augmented-generation/" target="_blank" rel="noopener noreferrer" className="reading-link">
+                    🔗 AWS — 什麼是 RAG (檢索增強生成)？原理與企業級應用優勢
+                  </a>
+                </li>
+                <li>
+                  <a href="https://medium.com/@tw_ai/understanding-context-window-and-llm-memory-zh-tw-9e23c0bf82a1" target="_blank" rel="noopener noreferrer" className="reading-link">
+                    🔗 Medium — 淺談 LLM 的無狀態性與短期、長期記憶管理機制
+                  </a>
+                </li>
+                <li>
+                  <a href="https://ithelp.ithome.com.tw/articles/10330999" target="_blank" rel="noopener noreferrer" className="reading-link">
+                    🔗 iT 邦幫忙 — 向量資料庫與 Embedding 原理白話文解析
+                  </a>
+                </li>
+              </ul>
+            </div>
             <div style={{ marginTop: '24px', padding: '16px', background: 'rgba(0,0,0,0.2)', borderRadius: '8px', borderLeft: '4px solid var(--accent-secondary)' }}>
               <strong>🚀 明日預告 (Day 4)：Model Context Protocol (MCP) 與工具呼叫</strong><br />
               現在我們的 Agent 有了個性和記憶，但它依然被困在一個黑盒子裡，無法上網、無法查天氣、無法幫你寄信。明天，我們將實作最火紅的 MCP 協定，為 Agent 裝上雙手，讓它能真實改變這個世界！

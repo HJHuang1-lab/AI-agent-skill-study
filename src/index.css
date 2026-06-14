@@ -405,3 +405,15 @@ h2 {
     border-width: 4px;
   }
 }
+
+/* Reading Links Hover Styling */
+.reading-link {
+  color: var(--accent-primary);
+  text-decoration: none;
+  transition: color 0.2s ease, text-decoration 0.2s ease;
+}
+
+.reading-link:hover {
+  color: var(--accent-secondary) !important;
+  text-decoration: underline;
+}

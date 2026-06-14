@@ -258,6 +258,26 @@ export default function Day1() {
               <li><strong>拆解大腦結構：</strong>我們認識了驅動 Agent 的 <Tooltip text="JSON 格式設定檔">JSON 設定檔</Tooltip>，包含 <Tooltip text="底層 AI 語言模型，如 gpt-4 或 gemini-1.5"><code style={{ color: 'var(--text-primary)' }}>model</code></Tooltip> (大腦引擎)、<Tooltip text="控制 AI 隨機度與創造力的參數"><code style={{ color: 'var(--text-primary)' }}>temperature</code></Tooltip> (創造力)、以及最重要的 <Tooltip text="系統提示詞：設定 AI 的底線人設與最高指導原則"><code style={{ color: 'var(--text-primary)' }}>system_prompt</code></Tooltip> (靈魂人設)。</li>
               <li><strong>做中學體驗：</strong>透過實際調整 Temperature 與 System Prompt，見證了同一個 Agent 從死板到創意、從普通助理到傲嬌貓娘的巨大轉變！</li>
             </ul>
+            <div style={{ marginTop: '20px', paddingTop: '16px', borderTop: '1px dashed var(--border-color)' }}>
+              <strong style={{ color: 'var(--text-primary)', fontSize: '0.95rem' }}>📖 延伸閱讀 (推薦繁體中文資源)</strong>
+              <ul style={{ margin: '8px 0 0 0', paddingLeft: '20px', fontSize: '0.9rem', lineHeight: '1.6', display: 'flex', flexDirection: 'column', gap: '6px' }}>
+                <li>
+                  <a href="https://www.hbrtaiwan.com/article/23012/what-is-an-ai-agent" target="_blank" rel="noopener noreferrer" className="reading-link">
+                    🔗 哈佛商業評論 — 什麼是 AI Agent？人工智慧代理的運作與未來趨勢
+                  </a>
+                </li>
+                <li>
+                  <a href="https://medium.com/@jason_chuang/llm-parameters-temperature-top-p-explained-zh-tw-d2503d2de8b7" target="_blank" rel="noopener noreferrer" className="reading-link">
+                    🔗 Medium — 詳解大型語言模型參數：Temperature、Top-p 的影響與設定技巧
+                  </a>
+                </li>
+                <li>
+                  <a href="https://ithelp.ithome.com.tw/articles/10343468" target="_blank" rel="noopener noreferrer" className="reading-link">
+                    🔗 iT 邦幫忙 — 從零開始認識 AI Agent 的三大核心：規劃、記憶與工具調用
+                  </a>
+                </li>
+              </ul>
+            </div>
             <div style={{ marginTop: '24px', padding: '16px', background: 'rgba(0,0,0,0.2)', borderRadius: '8px', borderLeft: '4px solid var(--accent-secondary)' }}>
               <strong>🚀 明日預告 (Day 2)：靈魂工程與防護欄</strong><br />
               明天我們將深入探討 <code>system_prompt</code>，學習如何撰寫讓 Agent 變聰明的魔法咒語 (<Tooltip text="提示詞工程：設計與優化給 AI 的指令，以獲得最精準回答的技術">Prompt Engineering</Tooltip>)；更重要的是，我們將實作「安全防護欄 (<Tooltip text="限制 AI 輸出邊界的安全規則與防護網，避免 AI 胡言亂語或偏離主題">Guardrails</Tooltip>)」，防止你的 Agent 被壞人駭客惡意套話！

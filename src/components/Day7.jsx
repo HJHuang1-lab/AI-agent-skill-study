@@ -346,6 +346,27 @@ export default function Day7() {
                 <p style={{ color: 'var(--text-secondary)', margin: 0, fontSize: '0.9rem', lineHeight: '1.5' }}>如果您懂 Python 或 TypeScript，這些框架讓您可以寫 Code 做出最客製化、最複雜的 AI 應用。</p>
               </div>
             </div>
+            
+            <div style={{ marginTop: '24px', paddingTop: '16px', borderTop: '1px dashed var(--border-color)' }}>
+              <strong style={{ color: 'var(--text-primary)', fontSize: '0.95rem' }}>📖 延伸閱讀 (推薦繁體中文資源)</strong>
+              <ul style={{ margin: '8px 0 0 0', paddingLeft: '20px', fontSize: '0.9rem', lineHeight: '1.6', display: 'flex', flexDirection: 'column', gap: '6px' }}>
+                <li>
+                  <a href="https://medium.com/@tw_ai/human-in-the-loop-hitl-in-critical-ai-applications-zh-tw-da1b827e61a2" target="_blank" rel="noopener noreferrer" className="reading-link">
+                    🔗 Medium — 關鍵決策中的安全煞車：Human-in-the-Loop (人類介入) 機制
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.techorange.com/2024/05/dify-coze-no-code-ai-agent/" target="_blank" rel="noopener noreferrer" className="reading-link">
+                    🔗 TechOrange — 免寫程式也能打造 AI Agent：Dify 與 Coze 視覺化開發指南
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.hbrtaiwan.com/article/23567/safely-deploying-ai-agents-in-enterprise" target="_blank" rel="noopener noreferrer" className="reading-link">
+                    🔗 哈佛商業評論 — 企業如何安全部署 AI Agent？預防失控與隱私風險的實務建議
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
 
             {!showCertificate ? (

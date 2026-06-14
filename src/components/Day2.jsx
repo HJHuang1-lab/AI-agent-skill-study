@@ -353,6 +353,26 @@ export default function Day2() {
               <li><strong>安全威脅：</strong><Tooltip text="提示詞注入攻擊">Prompt Injection</Tooltip> 是最常見的攻擊手法，駭客會透過 <Tooltip text="使用者直接輸入給 AI 的指令">User Prompt</Tooltip> 試圖覆寫 System Prompt。</li>
               <li><strong>建立防護網 (Guardrails)：</strong>在 System Prompt 中加入明確的拒絕條件與角色底線，是防護 Agent 的第一道防線。</li>
             </ul>
+            <div style={{ marginTop: '20px', paddingTop: '16px', borderTop: '1px dashed var(--border-color)' }}>
+              <strong style={{ color: 'var(--text-primary)', fontSize: '0.95rem' }}>📖 延伸閱讀 (推薦繁體中文資源)</strong>
+              <ul style={{ margin: '8px 0 0 0', paddingLeft: '20px', fontSize: '0.9rem', lineHeight: '1.6', display: 'flex', flexDirection: 'column', gap: '6px' }}>
+                <li>
+                  <a href="https://www.promptingguide.ai/zh" target="_blank" rel="noopener noreferrer" className="reading-link">
+                    🔗 Prompt Engineering Guide — 提示詞工程指南（繁體中文版）
+                  </a>
+                </li>
+                <li>
+                  <a href="https://medium.com/@tw_ai/what-is-prompt-injection-attack-and-defense-zh-tw-f1a238612749" target="_blank" rel="noopener noreferrer" className="reading-link">
+                    🔗 Medium — 什麼是提示詞注入攻擊？常見的 LLM 安全漏洞與防禦策略
+                  </a>
+                </li>
+                <li>
+                  <a href="https://medium.com/@tw_ai/guardrails-for-large-language-models-safety-layer-zh-tw-8ba2373bf911" target="_blank" rel="noopener noreferrer" className="reading-link">
+                    🔗 Medium — 大模型安全護欄 (Guardrails)：如何確保 AI 輸出符合安全與角色邊界
+                  </a>
+                </li>
+              </ul>
+            </div>
             <div style={{ marginTop: '24px', padding: '16px', background: 'rgba(0,0,0,0.2)', borderRadius: '8px', borderLeft: '4px solid var(--accent-secondary)' }}>
               <strong>🚀 明日預告 (Day 3)：Context Engineering (脈絡工程) 與記憶</strong><br />
               現在 Agent 既有個性又安全了，但它像一隻金魚，轉頭就忘記你剛才說過的話！明天我們將學習如何賦予 Agent 「短期記憶」與「長期記憶」，讓它能夠進行多輪連貫的深度對話。

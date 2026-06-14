@@ -366,6 +366,26 @@ ${is89Style
               <li><strong>協作模式：</strong>我們學習了 <strong><Tooltip text="流水線：一種 Agent 協作模式，上一個 Agent 的產出會直接變成下一個 Agent 的輸入">Pipeline</Tooltip></strong> 的線性處理，以及 <strong><Tooltip text="主從模式：一種 Agent 協作模式，由一個主管 Agent 負責發派任務給底下的員工 Agent">Hierarchical</Tooltip></strong> 的動態分派。</li>
               <li><strong>彈性組裝：</strong>透過修改單一 Agent (如 Writer) 的設定檔，我們就能輕易改變整個團隊的最終產出風格，而不會影響到負責查資料的 Researcher！</li>
             </ul>
+            <div style={{ marginTop: '20px', paddingTop: '16px', borderTop: '1px dashed var(--border-color)' }}>
+              <strong style={{ color: 'var(--text-primary)', fontSize: '0.95rem' }}>📖 延伸閱讀 (推薦繁體中文資源)</strong>
+              <ul style={{ margin: '8px 0 0 0', paddingLeft: '20px', fontSize: '0.9rem', lineHeight: '1.6', display: 'flex', flexDirection: 'column', gap: '6px' }}>
+                <li>
+                  <a href="https://ithelp.ithome.com.tw/articles/10350433" target="_blank" rel="noopener noreferrer" className="reading-link">
+                    🔗 iT 邦幫忙 — Multi-Agent 多智能體架構：專職分工與團隊協作設計模式
+                  </a>
+                </li>
+                <li>
+                  <a href="https://medium.com/@tw_ai/multi-agent-architectures-pipeline-vs-orchestrator-zh-tw-fca7d0ba3b11" target="_blank" rel="noopener noreferrer" className="reading-link">
+                    🔗 Medium — Multi-Agent 兩大主流設計模式：流水線與主管調度架構解析
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.inside.com.tw/article/34821-crewai-autogen-agent-framework" target="_blank" rel="noopener noreferrer" className="reading-link">
+                    🔗 INSIDE — AI Agent 框架大比拼：CrewAI 與 AutoGen 如何改變團隊協作
+                  </a>
+                </li>
+              </ul>
+            </div>
             <div style={{ marginTop: '24px', padding: '16px', background: 'rgba(0,0,0,0.2)', borderRadius: '8px', borderLeft: '4px solid var(--accent-secondary)' }}>
               <strong>🚀 明日預告 (Day 6)：自主規劃與反思 (Autonomous & Reflection)</strong><br />
               現在我們的 Agent 團隊需要人類給予明確指令。明天，我們將教你如何讓 Agent 具備「自我規劃」與「自我糾錯」的能力，成為一個真正獨立自主的 AI 專家！

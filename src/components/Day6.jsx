@@ -389,6 +389,26 @@ export default function Day6() {
               <li><strong>自我糾錯 (Reflection)：</strong>Agent 執行工具後不會盲目相信結果，而是會「<Tooltip text="自我反思與糾錯：AI 評估工具回傳結果是否符合任務要求的過程">反思</Tooltip>」這個結果是否足夠。如果不足，它會自行啟動下一次循環！</li>
               <li><strong>可解釋性：</strong>在應用程式中印出 <Tooltip text="思考日誌：AI 在決策過程中輸出的內心獨白">`[Thought]`</Tooltip> 日誌，不僅對除錯有極大幫助，也能讓人類確認 AI 的思考邏輯是否偏誤。</li>
             </ul>
+            <div style={{ marginTop: '20px', paddingTop: '16px', borderTop: '1px dashed var(--border-color)' }}>
+              <strong style={{ color: 'var(--text-primary)', fontSize: '0.95rem' }}>📖 延伸閱讀 (推薦繁體中文資源)</strong>
+              <ul style={{ margin: '8px 0 0 0', paddingLeft: '20px', fontSize: '0.9rem', lineHeight: '1.6', display: 'flex', flexDirection: 'column', gap: '6px' }}>
+                <li>
+                  <a href="https://medium.com/@tw_ai/react-framework-reasoning-and-acting-in-llms-zh-tw-2cdb82be3ab2" target="_blank" rel="noopener noreferrer" className="reading-link">
+                    🔗 Medium — 深度解析 ReAct 框架：結合推理與行動的 AI 自主思考模型
+                  </a>
+                </li>
+                <li>
+                  <a href="https://ithelp.ithome.com.tw/articles/10348988" target="_blank" rel="noopener noreferrer" className="reading-link">
+                    🔗 iT 邦幫忙 — 讓 AI 學會自我檢查：Self-Reflection 反思機制的實作與優勢
+                  </a>
+                </li>
+                <li>
+                  <a href="https://ithelp.ithome.com.tw/articles/10324123" target="_blank" rel="noopener noreferrer" className="reading-link">
+                    🔗 iT 邦幫忙 — 拆解思維過程：思考鏈 (Chain-of-Thought) 的基本原理與範例
+                  </a>
+                </li>
+              </ul>
+            </div>
             <div style={{ marginTop: '24px', padding: '16px', background: 'rgba(0,0,0,0.2)', borderRadius: '8px', borderLeft: '4px solid var(--accent-secondary)' }}>
               <strong>🚀 明日預告 (Day 7)：Human-in-the-Loop (HITL) 與結業專題</strong><br />
               當 Agent 擁有這麼強大的自主行動力時，如果它決定要幫你「刪除資料庫」怎麼辦？明天我們將學習關鍵的「人機協作卡控機制」，並完成這七天特訓營的最終綜合測驗！

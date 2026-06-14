@@ -343,15 +343,35 @@ export default function Day4() {
               <span role="img" aria-label="target">🎯</span> Day 4 課程總結與系列結語
             </h3>
             <ul style={{ margin: 0, paddingLeft: '24px', lineHeight: '1.8', color: 'var(--text-secondary)' }}>
-              <li><strong>Agent 只是大腦：</strong>它本身無法上網或執行任何程式碼。</li>
+              <li><strong>Agent 只是大腦：</strong>它本身無法上網或執行 any 程式碼。</li>
               <li><strong><Tooltip text="工具呼叫">Tool Calling</Tooltip> 是溝通橋樑：</strong>LLM 輸出特定的 JSON 格式，指示應用程式 (<Tooltip text="客戶端：執行 Agent 工具調用請求的應用程式端">Client</Tooltip>) 該執行哪個工具以及帶入什麼參數。</li>
               <li><strong><Tooltip text="模型上下文協議">MCP</Tooltip> 統一標準：</strong>隨著 MCP (Model Context Protocol) 越來越普及，開發者不需要再針對每個不同的 AI 模型重寫工具介面。寫好一個 MCP Server，所有的 Agent 都能串接！</li>
             </ul>
+            <div style={{ marginTop: '20px', paddingTop: '16px', borderTop: '1px dashed var(--border-color)' }}>
+              <strong style={{ color: 'var(--text-primary)', fontSize: '0.95rem' }}>📖 延伸閱讀 (推薦繁體中文資源)</strong>
+              <ul style={{ margin: '8px 0 0 0', paddingLeft: '20px', fontSize: '0.9rem', lineHeight: '1.6', display: 'flex', flexDirection: 'column', gap: '6px' }}>
+                <li>
+                  <a href="https://medium.com/@tw_ai/what-is-llm-tool-calling-function-calling-zh-tw-2a3bc861cb7e" target="_blank" rel="noopener noreferrer" className="reading-link">
+                    🔗 Medium — 詳解 LLM Tool Calling 與 Function Calling 運作流程
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.techbang.com/posts/119934-anthropic-model-context-protocol-mcp" target="_blank" rel="noopener noreferrer" className="reading-link">
+                    🔗 T客邦 — Anthropic 推出 MCP 開源協定，統一 AI 串接外部工具的 Type-C 接口
+                  </a>
+                </li>
+                <li>
+                  <a href="https://ithelp.ithome.com.tw/articles/10328766" target="_blank" rel="noopener noreferrer" className="reading-link">
+                    🔗 iT 邦幫忙 — 實作 Function Calling：讓 ChatGPT 自動呼叫外部天氣與地圖 API
+                  </a>
+                </li>
+              </ul>
+            </div>
             <div style={{ marginTop: '24px', padding: '16px', background: 'rgba(16, 185, 129, 0.1)', borderRadius: '8px', borderLeft: '4px solid var(--success)', textAlign: 'center' }}>
-              <h2 style={{ color: 'var(--success)', margin: '0 0 8px 0' }}>🎉 恭喜完成全系列課程！</h2>
+              <h2 style={{ color: 'var(--success)', margin: '0 0 8px 0' }}>🎉 恭喜完成前四天核心課程！</h2>
               <p style={{ margin: 0, color: 'var(--text-primary)' }}>
                 從 Day 1 的 Persona 設計、Day 2 的 Prompt Injection 防禦、Day 3 的 RAG 記憶體、一直到今天的 Tool Calling 與 MCP。<br/>
-                您已經完整掌握了打造當代 AI Agent 的所有核心技術觀念！
+                您已經完整掌握了打造單一 AI Agent 的所有核心技術與通訊協定！
               </p>
             </div>
           </div>
