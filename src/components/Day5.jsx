@@ -82,7 +82,7 @@ export default function Day5() {
           <p style={{ color: 'var(--text-secondary)', lineHeight: '1.6', fontSize: '0.95rem' }}>
             就像一家公司不能只有老闆一個人做所有事。單一 Prompt 塞入「查資料規則 + 寫作風格 + 審閱標準」，模型很容易精神分裂。拆分成多個 Agent 可以做到：**<Tooltip text="專責分工：將系統拆解為各自獨立且職責單一之模組的軟體設計原則">專責分工 (Separation of Concerns)</Tooltip>**、**獨立使用不同模型 (如編碼用 Claude、寫作用 GPT-4)**、以及**降低 Prompt 的複雜度**。
           </p>
-          <div style={{ display: 'flex', gap: '24px', marginTop: '16px' }}>
+          <div className="comparison-grid">
             <div style={{ flex: 1, background: 'rgba(255,255,255,0.03)', padding: '16px', borderRadius: '8px', borderLeft: '4px solid var(--text-secondary)' }}>
               <h4 style={{ margin: '0 0 12px 0', display: 'flex', alignItems: 'center', gap: '6px' }}>
                 <Workflow size={18} /> <Tooltip text="流水線模式：線性順序傳遞任務的智能體協作方式">流水線模式 (Pipeline)</Tooltip>

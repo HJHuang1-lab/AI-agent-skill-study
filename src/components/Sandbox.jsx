@@ -251,10 +251,10 @@ export default function Sandbox({ initialConfig, additionalFiles = {}, missionTi
       `}</style>
 
       {/* IDE Shell */}
-      <div style={{ display: 'flex', flex: 1, minHeight: '500px', border: '1px solid #333', borderRadius: '0 0 8px 8px', overflow: 'hidden', background: '#1e1e1e', fontFamily: '"Segoe UI", Tahoma, Geneva, Verdana, sans-serif' }}>
+      <div className="ide-shell">
         
         {/* Activity Bar */}
-        <div style={{ width: '48px', background: '#333333', display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '12px 0', gap: '20px', borderRight: '1px solid #252526', flexShrink: 0 }}>
+        <div className="ide-activity-bar">
           <Files size={24} color="#fff" strokeWidth={1.5} />
           <Search size={24} color="#858585" strokeWidth={1.5} />
           <GitBranch size={24} color="#858585" strokeWidth={1.5} />
@@ -263,25 +263,27 @@ export default function Sandbox({ initialConfig, additionalFiles = {}, missionTi
         </div>
 
         {/* Side Bar */}
-        <div style={{ width: '200px', background: '#252526', display: 'flex', flexDirection: 'column', borderRight: '1px solid #333', flexShrink: 0 }}>
+        <div className="ide-sidebar">
           <div style={{ padding: '10px 16px', fontSize: '11px', color: '#ccc', textTransform: 'uppercase', letterSpacing: '1px' }}>
             Explorer
           </div>
-          {Object.keys(files).map(filename => {
-            const isTargetFile = steps[tutorialStep - 1]?.label.includes(filename) && activeFile !== filename;
-            return (
-              <div 
-                key={filename}
-                onClick={() => setActiveFile(filename)}
-                className={isTargetFile ? "file-pulse" : ""}
-                style={{ display: 'flex', alignItems: 'center', gap: '6px', padding: '4px 16px', background: activeFile === filename ? '#37373d' : 'transparent', color: activeFile === filename ? '#fff' : '#ccc', fontSize: '13px', cursor: 'pointer' }}
-              >
-                {filename.endsWith('.json') ? <FileJson size={16} color="#cbcb41" /> : <FileText size={16} color="#519aba" />}
-              <span style={{ flex: 1 }}>{filename}</span>
-              {isFileReadonly(filename) && <Lock size={12} color="#858585" />}
-            </div>
-            );
-          })}
+          <div className="ide-sidebar-files">
+            {Object.keys(files).map(filename => {
+              const isTargetFile = steps[tutorialStep - 1]?.label.includes(filename) && activeFile !== filename;
+              return (
+                <div 
+                  key={filename}
+                  onClick={() => setActiveFile(filename)}
+                  className={isTargetFile ? "file-pulse" : ""}
+                  style={{ display: 'flex', alignItems: 'center', gap: '6px', padding: '4px 16px', background: activeFile === filename ? '#37373d' : 'transparent', color: activeFile === filename ? '#fff' : '#ccc', fontSize: '13px', cursor: 'pointer' }}
+                >
+                  {filename.endsWith('.json') ? <FileJson size={16} color="#cbcb41" /> : <FileText size={16} color="#519aba" />}
+                <span style={{ flex: 1 }}>{filename}</span>
+                {isFileReadonly(filename) && <Lock size={12} color="#858585" />}
+              </div>
+              );
+            })}
+          </div>
         </div>
 
         {/* Main Editor Area */}
@@ -326,9 +328,9 @@ export default function Sandbox({ initialConfig, additionalFiles = {}, missionTi
             </div>
           </div>
 
-          <div style={{ display: 'flex', flex: 1, overflow: 'hidden' }}>
+          <div className="ide-body">
             {/* Code */}
-            <div style={{ flex: 1, display: 'flex', flexDirection: 'column', borderRight: '1px solid #333' }}>
+            <div className="ide-editor-container">
               <div style={{ flex: 1, display: 'flex', padding: '8px 0', overflowY: 'auto' }}>
                 {isVisualMode && activeFile === 'agent_config.json' ? (
                   <div style={{ padding: '0 24px', width: '100%', color: '#ccc', fontSize: '13px', display: 'flex', flexDirection: 'column', gap: '16px' }}>
@@ -445,7 +447,7 @@ export default function Sandbox({ initialConfig, additionalFiles = {}, missionTi
             </div>
 
             {/* Terminal */}
-            <div style={{ width: '350px', display: 'flex', flexDirection: 'column', background: '#1e1e1e', borderLeft: '1px solid #333' }}>
+            <div className="ide-terminal-container">
               <div style={{ display: 'flex', background: '#252526', height: '35px', alignItems: 'center', padding: '0 16px', color: '#ccc', fontSize: '12px', gap: '8px', borderBottom: '1px solid #333' }}>
                 <Terminal size={14} /> TERMINAL (Agent Preview)
               </div>

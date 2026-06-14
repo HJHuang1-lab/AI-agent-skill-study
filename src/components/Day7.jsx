@@ -382,15 +382,7 @@ export default function Day7() {
               </div>
             ) : (
               <div style={{ maxWidth: '800px', margin: '0 auto', animation: 'fadeIn 1s ease-out' }}>
-                <div style={{ 
-                  background: 'linear-gradient(135deg, #1e1e1e 0%, #2d2d2d 100%)', 
-                  border: '8px solid #333', 
-                  borderRadius: '16px', 
-                  padding: '64px',
-                  boxShadow: '0 20px 50px rgba(0,0,0,0.5)',
-                  position: 'relative',
-                  overflow: 'hidden'
-                }}>
+                <div className="certificate-container">
                   {/* Decorative Elements */}
                   <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '8px', background: 'linear-gradient(90deg, #60a5fa, #c084fc, #f472b6)' }}></div>
                   <div style={{ position: 'absolute', top: '-50px', right: '-50px', width: '150px', height: '150px', background: 'var(--accent-primary)', opacity: '0.1', borderRadius: '50%', filter: 'blur(30px)' }}></div>
@@ -400,19 +392,19 @@ export default function Day7() {
                     <div style={{ marginBottom: '24px' }}>
                       <CheckCircle2 size={48} color="var(--success)" style={{ display: 'inline-block' }} />
                     </div>
-                    <h2 style={{ fontSize: '2rem', color: '#888', textTransform: 'uppercase', letterSpacing: '4px', marginBottom: '8px' }}>Certificate of Completion</h2>
-                    <h1 style={{ fontSize: '3.5rem', color: 'var(--text-primary)', margin: '0 0 40px 0', fontFamily: 'serif' }}>{userName}</h1>
-                    <p style={{ fontSize: '1.2rem', color: 'var(--text-secondary)', lineHeight: '1.8', margin: '0 0 40px 0' }}>
+                    <h2 style={{ fontSize: 'clamp(1rem, 4vw, 2rem)', color: '#888', textTransform: 'uppercase', letterSpacing: '4px', marginBottom: '8px' }}>Certificate of Completion</h2>
+                    <h1 style={{ fontSize: 'clamp(1.8rem, 6vw, 3.5rem)', color: 'var(--text-primary)', margin: '0 0 40px 0', fontFamily: 'serif' }}>{userName}</h1>
+                    <p style={{ fontSize: 'clamp(0.9rem, 3.2vw, 1.2rem)', color: 'var(--text-secondary)', lineHeight: '1.8', margin: '0 0 40px 0' }}>
                       This certifies that the individual named above has successfully completed the<br/>
                       <strong style={{ color: 'white' }}>AI Agent 實戰特訓營 (7 Days)</strong><br/>
                       demonstrating proficiency in Prompt Engineering, Tool Integration, Agentic Planning, and Human-in-the-Loop workflows.
                     </p>
-                    <div style={{ display: 'flex', justifyContent: 'space-between', borderTop: '1px solid #444', paddingTop: '24px', marginTop: '48px', alignItems: 'flex-end' }}>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', gap: '24px', borderTop: '1px solid #444', paddingTop: '24px', marginTop: '48px', alignItems: 'flex-end' }}>
                       <div style={{ textAlign: 'left' }}>
                         <div style={{ fontSize: '1.2rem', fontFamily: 'cursive', color: '#c084fc' }}>Antigravity</div>
                         <div style={{ fontSize: '0.9rem', color: '#888', textTransform: 'uppercase', letterSpacing: '1px' }}>Lead Instructor</div>
                       </div>
-                      <div style={{ textAlign: 'right' }}>
+                      <div style={{ textAlign: 'left' }}>
                         <div style={{ fontSize: '1.1rem', color: 'white', marginBottom: '4px' }}>{new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</div>
                         <div style={{ fontSize: '0.9rem', color: '#888', textTransform: 'uppercase', letterSpacing: '1px' }}>Date of Completion</div>
                       </div>

@@ -41,7 +41,7 @@ export default function Day1() {
             <BookOpen size={24} color="var(--accent-primary)" />
             1. 傳統對話模型 vs AI Agent
           </h2>
-          <div style={{ display: 'flex', gap: '24px', marginTop: '16px' }}>
+          <div className="comparison-grid">
             <div style={{ flex: 1, background: 'rgba(255,255,255,0.03)', padding: '16px', borderRadius: '8px', borderLeft: '4px solid var(--text-secondary)' }}>
               <h4 style={{ margin: '0 0 12px 0' }}>傳統 <Tooltip text="聊天機器人：依賴固定腳本或對話，但缺乏自主規劃與工具調用能力的系統">Chatbot</Tooltip> (如早期的 <Tooltip text="ChatGPT：由 OpenAI 開發的對話式大型語言模型">ChatGPT</Tooltip>)</h4>
               <p style={{ margin: 0, color: 'var(--text-secondary)', lineHeight: '1.6', fontSize: '0.95rem' }}>

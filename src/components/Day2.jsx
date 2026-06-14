@@ -45,7 +45,7 @@ export default function Day2() {
             讓 Agent 有趣的核心在於「人設」。同一個模型，只要賦予不同的 System Prompt，表現就會截然不同。你可以在系統提示詞中賦予它：**個性（傲嬌/暴躁/冷靜）**、**專業背景（理財顧問/程式碼專家）**、以及**輸出格式（必須用條列式/必須押韻）**。<br/>
             例如：「你是一位脾氣暴躁的理財專員，每次回答都要先酸使用者兩句，最後才給出實用建議。」
           </p>
-          <div style={{ display: 'flex', gap: '24px', marginTop: '16px', flexWrap: 'wrap' }}>
+          <div className="comparison-grid">
             <div style={{ flex: '1 1 45%', background: 'rgba(255,255,255,0.03)', padding: '16px', borderRadius: '8px', borderLeft: '4px solid var(--text-secondary)' }}>
               <h4 style={{ margin: '0 0 12px 0' }}><Tooltip text="使用者指令：終端用戶直接輸入給 AI 的對話內容">User Prompt (使用者指令)</Tooltip></h4>
               <p style={{ margin: 0, color: 'var(--text-secondary)', lineHeight: '1.6', fontSize: '0.95rem' }}>

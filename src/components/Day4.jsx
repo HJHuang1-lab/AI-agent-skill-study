@@ -66,7 +66,7 @@ export default function Day4() {
           <p style={{ color: 'var(--text-secondary)', lineHeight: '1.6', fontSize: '0.95rem' }}>
             大型語言模型 (LLM) 只能根據它「被訓練時」的資料來回答問題。如果你問它「今天台北天氣如何？」，它絕對答不出來，因為它無法主動上網。要解決這個問題，我們必須賦予它**「呼叫外部工具」**的能力。
           </p>
-          <div style={{ display: 'flex', gap: '24px', marginTop: '16px' }}>
+          <div className="comparison-grid">
             <div style={{ flex: 1, background: 'rgba(255,255,255,0.03)', padding: '16px', borderRadius: '8px', borderLeft: '4px solid var(--accent-secondary)' }}>
               <h4 style={{ margin: '0 0 12px 0' }}>💡 Agent 不會自己執行程式！</h4>
               <p style={{ margin: 0, color: 'var(--text-secondary)', lineHeight: '1.6', fontSize: '0.95rem' }}>

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { CheckCircle2 } from 'lucide-react';
+import { CheckCircle2, Menu, X } from 'lucide-react';
 import Day1 from './components/Day1';
 import Day2 from './components/Day2';
 import Day3 from './components/Day3';
@@ -20,6 +20,8 @@ function App() {
       return [];
     }
   });
+
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   useEffect(() => {
     localStorage.setItem('agent-camp-current-day', currentDay);
@@ -55,9 +57,24 @@ function App() {
   const progressPercent = Math.round((completedDays.length / 7) * 100);
 
   return (
-    <div style={{ display: 'flex', height: '100vh', background: 'var(--bg-main)', color: 'var(--text-primary)' }}>
+    <div className="app-container">
+      {/* Floating Hamburger Toggle Button on Mobile */}
+      <button 
+        className="menu-toggle"
+        onClick={() => setIsSidebarOpen(!isSidebarOpen)}
+        aria-label="Toggle menu"
+      >
+        {isSidebarOpen ? <X size={24} /> : <Menu size={24} />}
+      </button>
+
+      {/* Sidebar Overlay on Mobile */}
+      <div 
+        className={`sidebar-overlay ${isSidebarOpen ? 'open' : ''}`}
+        onClick={() => setIsSidebarOpen(false)}
+      />
+
       {/* Sidebar Navigation */}
-      <div style={{ width: '320px', background: 'var(--bg-sidebar)', borderRight: '1px solid var(--border-color)', padding: '24px', overflowY: 'auto' }}>
+      <div className={`app-sidebar ${isSidebarOpen ? 'open' : ''}`}>
         <h2 style={{ fontSize: '1.5rem', fontWeight: 'bold', margin: '0 0 8px 0', color: 'var(--text-primary)' }}>
           AI Agent 實戰特訓營
         </h2>
@@ -82,7 +99,12 @@ function App() {
             return (
               <div 
                 key={day.id}
-                onClick={() => day.id <= 7 && setCurrentDay(day.id)}
+                onClick={() => {
+                  if (day.id <= 7) {
+                    setCurrentDay(day.id);
+                    setIsSidebarOpen(false); // Close sidebar on mobile
+                  }
+                }}
                 style={{
                   padding: '16px',
                   borderRadius: '12px',
@@ -111,7 +133,7 @@ function App() {
       </div>
 
       {/* Main Content Area */}
-      <div className="main-content" style={{ flex: 1, padding: '40px', overflowY: 'auto' }}>
+      <div className="main-content">
         {currentDay === 1 && <Day1 />}
         {currentDay === 2 && <Day2 />}
         {currentDay === 3 && <Day3 />}

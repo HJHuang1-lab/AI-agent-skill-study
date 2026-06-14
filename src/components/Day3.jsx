@@ -49,7 +49,7 @@ export default function Day3() {
           <p style={{ color: 'var(--text-secondary)', lineHeight: '1.6', fontSize: '0.95rem' }}>
             大型語言模型 (LLM) 本質上是「<Tooltip text="無狀態：AI 每次 API 呼叫都是全新的，不保留之前的狀態">無狀態 (Stateless)</Tooltip>」的。每一次你按下發送鍵，對模型來說都是「宇宙的第一次重啟」。它不會記得上一秒你說過的話。因此，我們必須透過 **<Tooltip text="脈絡工程：將對話歷史或相關文件打包進 Prompt 發給 AI 的技術">Context Engineering (脈絡工程)</Tooltip>**，在每次發問時，把「過去的記憶」打包好，當作前提一起傳送給它。
           </p>
-          <div style={{ display: 'flex', gap: '24px', marginTop: '16px', flexWrap: 'wrap' }}>
+          <div className="comparison-grid">
             <div style={{ flex: '1 1 45%', background: 'rgba(255,255,255,0.03)', padding: '16px', borderRadius: '8px', borderLeft: '4px solid var(--accent-secondary)' }}>
               <h4 style={{ margin: '0 0 12px 0' }}>短期記憶 (Short-term Memory)</h4>
               <p style={{ margin: 0, color: 'var(--text-secondary)', lineHeight: '1.6', fontSize: '0.95rem' }}>
