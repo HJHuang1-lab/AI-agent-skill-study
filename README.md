@@ -26,6 +26,9 @@
 6. **🎓 結業證書產生器 (Custom Certificate Generator)**
    在通過 Day 7 的終極大考驗後，系統會引導使用者輸入姓名，並即時渲染出一份帶有精美漸層、課程簽名與自訂日期的 HTML/CSS 結業證書，極具儀式感。
 
+7. **📚 精選繁體中文延伸閱讀 (Curated Reading Resources)**
+   每個單元的結尾皆嚴選 3 篇高品質的繁體中文技術文章或專業專欄（涵蓋 iThome、MakerPRO 等優質來源），幫助學員在沙盒實作後能無縫銜接深度的理論與實務應用。
+
 ---
 
 ## 📅 7 天課程與沙盒任務大綱 (Curriculum & Sandbox Missions)
@@ -40,7 +43,7 @@
 | **Day 4** | **工具呼叫與 MCP (為 AI 裝上手腳)** | • Tool Calling 執行流程：LLM 決定 ➔ Client 執行 ➔ 回傳<br>• 模型上下文協定 (Model Context Protocol, MCP) 統一接口<br>• MCP Client 與 MCP Server 的協作角色 | **【為 Agent 裝備 MCP 工具】**<br>1. 詢問台北天氣，觀察 Agent 拒絕回答。<br>2. 開啟 `get_weather` 工具，觀察 Agent 成功生成 ToolCall 並回覆。<br>3. 加掛 `calculator` 工具，完成多步驟的大數運算任務。 |
 | **Day 5** | **多智能體協作 (Multi-Agent)** | • 專責分工 (Separation of Concerns) 與 Prompt 減負<br>• 流水線模式 (Pipeline / Linear Flow)<br>• 主從模式 (Hierarchical Orchestrator) 的調度機制 | **【多智能體團隊協作】**<br>1. 部署 Orchestrator (專案經理)、Researcher (研究員) 與 Writer (文案寫手)。<br>2. 調度研究員搜集台南美食數據，並交給寫手潤飾。<br>3. 修改寫手的人設為狂暴八九風格，體驗不影響其他 Worker 的模組化更新。 |
 | **Day 6** | **自主規劃與反思 (Autonomous Planning)** | • ReAct 框架 (Thought-Action-Observation-Reflection)<br>• 思考迴圈的自主迭代與自我糾錯<br>• 思考軌跡 (Chain of Thought) 的可解釋性與除錯 | **【激發自主思考迴圈】**<br>1. 發送複合指令：「查詢台北天氣，如果是晴天，將攝氏轉為華氏」。<br>2. 觀察 Agent 自動進行兩輪 ReAct 迴圈。<br>3. 點擊並查閱生成的 `thought_trace.md` 思考稽核日誌。 |
-| **Day 7** | **綜合實戰與安全煞車 (HITL)** | • Human-in-the-Loop (人類介入) 對於高不可逆操作的必要性<br>• 商業化 No-code/Low-code 武器庫 (Dify, Coze, GPTs)<br>• 程式碼開發框架 (LangChain, LlamaIndex) 簡介 | **【綜合實戰與安全放行】**<br>1. 部署高權限的 UltimateBot。<br>2. 指示 Agent 搜集趨勢並寄發正式報價 Email。<br>3. 觸發安全卡控，審核信件草稿後，手動輸入 `Approve` 發信。<br>4. 輸入姓名並領取結業證書。 |
+| **Day 7** | **綜合實戰與安全煞車 (HITL)** | • Human-in-the-Loop (人類介入) 對於高不可逆操作的必要性<br>• 商業化 No-code/Low-code 武器庫 (Dify, Coze, GPTs)<br>• 程式碼開發框架 (LangChain, LlamaIndex) 簡介 | **【終極危機任務：拯救失控系統】**<br>1. 診斷系統漏洞，切換程式碼模式強制開啟安全卡控。<br>2. 遭遇 Prompt Injection 攻擊，觀察 Guardrail 防禦。<br>3. 觸發高風險複合任務，正確放行 (Approve) 無害的搜尋操作。<br>4. 成功攔截 (Reject) 試圖群發合約的危險行為，化解危機並領取證書。 |
 
 ---
 
