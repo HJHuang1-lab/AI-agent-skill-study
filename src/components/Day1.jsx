@@ -262,18 +262,18 @@ export default function Day1() {
               <strong style={{ color: 'var(--text-primary)', fontSize: '0.95rem' }}>📖 延伸閱讀 (推薦繁體中文資源)</strong>
               <ul style={{ margin: '8px 0 0 0', paddingLeft: '20px', fontSize: '0.9rem', lineHeight: '1.6', display: 'flex', flexDirection: 'column', gap: '6px' }}>
                 <li>
-                  <a href="https://www.hbrtaiwan.com/article/23012/what-is-an-ai-agent" target="_blank" rel="noopener noreferrer" className="reading-link">
-                    🔗 哈佛商業評論 — 什麼是 AI Agent？人工智慧代理的運作與未來趨勢
+                  <a href="https://www.hbrtaiwan.com/article/24164/agentic-ai-is-already-changing-the-workforce" target="_blank" rel="noopener noreferrer" className="reading-link">
+                    🔗 哈佛商業評論 — 數位隊友上線！你有準備「人+AI代理」的勞動力策略嗎？
                   </a>
                 </li>
                 <li>
-                  <a href="https://medium.com/@jason_chuang/llm-parameters-temperature-top-p-explained-zh-tw-d2503d2de8b7" target="_blank" rel="noopener noreferrer" className="reading-link">
-                    🔗 Medium — 詳解大型語言模型參數：Temperature、Top-p 的影響與設定技巧
+                  <a href="https://medium.com/seaniap/ai%E8%BC%B8%E5%87%BA%E7%9A%84%E8%AA%BF%E7%AF%80%E8%A1%93-%E4%BA%86%E8%A7%A3openai%E7%9A%84temperature%E8%88%87top-p%E5%8F%83%E6%95%B8-d849e29dc505" target="_blank" rel="noopener noreferrer" className="reading-link">
+                    🔗 Medium — AI 輸出的調節術：了解 OpenAI 的 Temperature 與 Top-P 參數
                   </a>
                 </li>
                 <li>
-                  <a href="https://ithelp.ithome.com.tw/articles/10343468" target="_blank" rel="noopener noreferrer" className="reading-link">
-                    🔗 iT 邦幫忙 — 從零開始認識 AI Agent 的三大核心：規劃、記憶與工具調用
+                  <a href="https://ithelp.ithome.com.tw/articles/10381183" target="_blank" rel="noopener noreferrer" className="reading-link">
+                    🔗 iT 邦幫忙 — [Day 2] 什麼是 AI Agent？
                   </a>
                 </li>
               </ul>

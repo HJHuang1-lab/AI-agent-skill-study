@@ -361,8 +361,8 @@ export default function Day7() {
                   </a>
                 </li>
                 <li>
-                  <a href="https://www.hbrtaiwan.com/article/23567/safely-deploying-ai-agents-in-enterprise" target="_blank" rel="noopener noreferrer" className="reading-link">
-                    🔗 哈佛商業評論 — 企業如何安全部署 AI Agent？預防失控與隱私風險的實務建議
+                  <a href="https://www.hbrtaiwan.com/article/24145/can-ai-agents-be-trusted" target="_blank" rel="noopener noreferrer" className="reading-link">
+                    🔗 哈佛商業評論 — AI 代理來勢洶洶，你準備好交出多少信任？
                   </a>
                 </li>
               </ul>

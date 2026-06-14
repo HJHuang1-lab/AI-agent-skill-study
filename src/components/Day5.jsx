@@ -380,8 +380,8 @@ ${is89Style
                   </a>
                 </li>
                 <li>
-                  <a href="https://www.inside.com.tw/article/34821-crewai-autogen-agent-framework" target="_blank" rel="noopener noreferrer" className="reading-link">
-                    🔗 INSIDE — AI Agent 框架大比拼：CrewAI 與 AutoGen 如何改變團隊協作
+                  <a href="https://brianjhang.com/en/ai/trends/ai-agent-frameworks-battle-2025/" target="_blank" rel="noopener noreferrer" className="reading-link">
+                    🔗 Brian Jhang's Edge — 2025 AI 智能體框架大戰：CrewAI vs AutoGen vs LangGraph，誰是新王者？
                   </a>
                 </li>
               </ul>

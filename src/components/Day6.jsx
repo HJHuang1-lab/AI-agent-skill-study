@@ -398,8 +398,8 @@ export default function Day6() {
                   </a>
                 </li>
                 <li>
-                  <a href="https://ithelp.ithome.com.tw/articles/10348988" target="_blank" rel="noopener noreferrer" className="reading-link">
-                    🔗 iT 邦幫忙 — 讓 AI 學會自我檢查：Self-Reflection 反思機制的實作與優勢
+                  <a href="https://ithelp.ithome.com.tw/articles/10348596" target="_blank" rel="noopener noreferrer" className="reading-link">
+                    🔗 iT 邦幫忙 — AI 代理自我反思：深入探討 Self-Refine 技術與 LangGraph 實作
                   </a>
                 </li>
                 <li>
