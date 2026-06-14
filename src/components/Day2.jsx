@@ -362,13 +362,13 @@ export default function Day2() {
                   </a>
                 </li>
                 <li>
-                  <a href="https://medium.com/@tw_ai/what-is-prompt-injection-attack-and-defense-zh-tw-f1a238612749" target="_blank" rel="noopener noreferrer" className="reading-link">
-                    🔗 Medium — 什麼是提示詞注入攻擊？常見的 LLM 安全漏洞與防禦策略
+                  <a href="https://www.ithome.com.tw/news/168690" target="_blank" rel="noopener noreferrer" className="reading-link">
+                    🔗 iThome — 避免提示注入攻擊：開發者與使用者的防禦策略
                   </a>
                 </li>
                 <li>
-                  <a href="https://medium.com/@tw_ai/guardrails-for-large-language-models-safety-layer-zh-tw-8ba2373bf911" target="_blank" rel="noopener noreferrer" className="reading-link">
-                    🔗 Medium — 大模型安全護欄 (Guardrails)：如何確保 AI 輸出符合安全與角色邊界
+                  <a href="https://www.ithome.com.tw/news/167020" target="_blank" rel="noopener noreferrer" className="reading-link">
+                    🔗 iThome — 推動AI代理人應用：Nvidia提供AI護欄微服務與內容安全防範工具
                   </a>
                 </li>
               </ul>

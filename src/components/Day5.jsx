@@ -375,8 +375,8 @@ ${is89Style
                   </a>
                 </li>
                 <li>
-                  <a href="https://medium.com/@tw_ai/multi-agent-architectures-pipeline-vs-orchestrator-zh-tw-fca7d0ba3b11" target="_blank" rel="noopener noreferrer" className="reading-link">
-                    🔗 Medium — Multi-Agent 兩大主流設計模式：流水線與主管調度架構解析
+                  <a href="https://www.largitdata.com/knowledge/multi-agent-system/" target="_blank" rel="noopener noreferrer" className="reading-link">
+                    🔗 LargitData — Multi-Agent 多智能體系統解析：超越單一模型限制的企業AI新架構
                   </a>
                 </li>
                 <li>

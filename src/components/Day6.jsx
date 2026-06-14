@@ -393,8 +393,8 @@ export default function Day6() {
               <strong style={{ color: 'var(--text-primary)', fontSize: '0.95rem' }}>📖 延伸閱讀 (推薦繁體中文資源)</strong>
               <ul style={{ margin: '8px 0 0 0', paddingLeft: '20px', fontSize: '0.9rem', lineHeight: '1.6', display: 'flex', flexDirection: 'column', gap: '6px' }}>
                 <li>
-                  <a href="https://medium.com/@tw_ai/react-framework-reasoning-and-acting-in-llms-zh-tw-2cdb82be3ab2" target="_blank" rel="noopener noreferrer" className="reading-link">
-                    🔗 Medium — 深度解析 ReAct 框架：結合推理與行動的 AI 自主思考模型
+                  <a href="https://edge.aif.tw/application-react-prompting/" target="_blank" rel="noopener noreferrer" className="reading-link">
+                    🔗 人工智慧科技基金會 — 結合推理與行動的 ReAct Prompting 技術解析
                   </a>
                 </li>
                 <li>

@@ -351,8 +351,8 @@ export default function Day4() {
               <strong style={{ color: 'var(--text-primary)', fontSize: '0.95rem' }}>📖 延伸閱讀 (推薦繁體中文資源)</strong>
               <ul style={{ margin: '8px 0 0 0', paddingLeft: '20px', fontSize: '0.9rem', lineHeight: '1.6', display: 'flex', flexDirection: 'column', gap: '6px' }}>
                 <li>
-                  <a href="https://medium.com/@tw_ai/what-is-llm-tool-calling-function-calling-zh-tw-2a3bc861cb7e" target="_blank" rel="noopener noreferrer" className="reading-link">
-                    🔗 Medium — 詳解 LLM Tool Calling 與 Function Calling 運作流程
+                  <a href="https://claire-chang.com/2024/10/10/%E4%BA%86%E8%A7%A3llm%E7%9A%84%E5%87%BD%E6%95%B8%E8%AA%BF%E7%94%A8function-calling/" target="_blank" rel="noopener noreferrer" className="reading-link">
+                    🔗 Claire Chang — 了解 LLM 的函式調用 (Function Calling)：原理與實戰應用
                   </a>
                 </li>
                 <li>

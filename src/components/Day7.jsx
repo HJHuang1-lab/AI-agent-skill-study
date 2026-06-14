@@ -351,8 +351,8 @@ export default function Day7() {
               <strong style={{ color: 'var(--text-primary)', fontSize: '0.95rem' }}>📖 延伸閱讀 (推薦繁體中文資源)</strong>
               <ul style={{ margin: '8px 0 0 0', paddingLeft: '20px', fontSize: '0.9rem', lineHeight: '1.6', display: 'flex', flexDirection: 'column', gap: '6px' }}>
                 <li>
-                  <a href="https://medium.com/@tw_ai/human-in-the-loop-hitl-in-critical-ai-applications-zh-tw-da1b827e61a2" target="_blank" rel="noopener noreferrer" className="reading-link">
-                    🔗 Medium — 關鍵決策中的安全煞車：Human-in-the-Loop (人類介入) 機制
+                  <a href="https://makerpro.cc/2024/10/what-is-human-in-the-loop/" target="_blank" rel="noopener noreferrer" className="reading-link">
+                    🔗 MakerPRO — 什麼是 Human-in-the-Loop？人類介入在 AI 系統中的關鍵角色
                   </a>
                 </li>
                 <li>

@@ -333,8 +333,8 @@ export default function Day3() {
                   </a>
                 </li>
                 <li>
-                  <a href="https://medium.com/@tw_ai/understanding-context-window-and-llm-memory-zh-tw-9e23c0bf82a1" target="_blank" rel="noopener noreferrer" className="reading-link">
-                    🔗 Medium — 淺談 LLM 的無狀態性與短期、長期記憶管理機制
+                  <a href="https://ihower.tw/blog/12817-context-engineering" target="_blank" rel="noopener noreferrer" className="reading-link">
+                    🔗 Ihower — Context Engineering (上下文工程)：讓 AI 的記憶更精準與高效
                   </a>
                 </li>
                 <li>
