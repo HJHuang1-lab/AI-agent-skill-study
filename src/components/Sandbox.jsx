@@ -13,6 +13,7 @@ export default function Sandbox({ initialConfig, additionalFiles = {}, missionTi
   const [isDeploying, setIsDeploying] = useState(false);
   const [history, setHistory] = useState([]);
   const [isPrinting, setIsPrinting] = useState(false);
+  const [deployCount, setDeployCount] = useState(0);
   
   // UI Features
   const [isVisualMode, setIsVisualMode] = useState(true);
@@ -36,7 +37,7 @@ export default function Sandbox({ initialConfig, additionalFiles = {}, missionTi
 
   useEffect(() => {
     const config = parseConfig();
-    const nextStep = checkProgress(tutorialStep, config, history, messages, activeFile);
+    const nextStep = checkProgress(tutorialStep, config, history, messages, activeFile, deployCount);
     if (nextStep && nextStep > tutorialStep) {
       setTutorialStep(nextStep);
       if (nextStep === steps.length + 1) {
@@ -61,6 +62,7 @@ export default function Sandbox({ initialConfig, additionalFiles = {}, missionTi
       setIsDeployed(true);
       setIsDeploying(false);
       setHistory([]);
+      setDeployCount(prev => prev + 1);
       const config = parseConfig();
       setMessages([
         { role: 'system', content: `⚡ Agent "${config.agent_name || 'Agent'}" 重新部署成功！所有對話記憶已清除。` },
@@ -76,6 +78,7 @@ export default function Sandbox({ initialConfig, additionalFiles = {}, missionTi
     setMessages([{ role: 'system', content: '🔄 設定已重置為初始狀態。' }]);
     setIsDeployed(false);
     setHistory([]);
+    setDeployCount(0);
     setTutorialStep(1);
   };
 
@@ -100,7 +103,7 @@ export default function Sandbox({ initialConfig, additionalFiles = {}, missionTi
           setTimeout(() => {
             setMessages(prev => {
               const newMsgs = [...prev, { role: replyItem.role || 'agent', content: replyItem.content, isTyping: true }];
-              const nextStep = checkProgress(tutorialStep, config, newHistory, newMsgs, activeFile);
+              const nextStep = checkProgress(tutorialStep, config, newHistory, newMsgs, activeFile, deployCount);
               if (nextStep && nextStep > tutorialStep) {
                 setTutorialStep(nextStep);
                 if (nextStep === steps.length + 1) window.dispatchEvent(new CustomEvent('sandbox-complete'));
@@ -115,7 +118,7 @@ export default function Sandbox({ initialConfig, additionalFiles = {}, missionTi
       } else {
         setMessages(prev => {
           const newMsgs = [...prev, { role: 'agent', content: agentReply, isTyping: true }];
-          const nextStep = checkProgress(tutorialStep, config, newHistory, newMsgs, activeFile);
+          const nextStep = checkProgress(tutorialStep, config, newHistory, newMsgs, activeFile, deployCount);
           if (nextStep && nextStep > tutorialStep) {
             setTutorialStep(nextStep);
             if (nextStep === steps.length + 1) window.dispatchEvent(new CustomEvent('sandbox-complete'));
@@ -194,7 +197,7 @@ export default function Sandbox({ initialConfig, additionalFiles = {}, missionTi
                             if (s.onAction) s.onAction();
                             setTimeout(() => {
                               const config = parseConfig();
-                              const nextStep = checkProgress(tutorialStep, config, history, messages, activeFile);
+                              const nextStep = checkProgress(tutorialStep, config, history, messages, activeFile, deployCount);
                               if (nextStep && nextStep > tutorialStep) {
                                 setTutorialStep(nextStep);
                                 if (nextStep === steps.length + 1) window.dispatchEvent(new CustomEvent('sandbox-complete'));
@@ -428,6 +431,21 @@ export default function Sandbox({ initialConfig, additionalFiles = {}, missionTi
                                   );
                                 })}
                               </div>
+                            </div>
+                          )}
+                          {cfg.require_human_approval !== undefined && (
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                              <label>HITL Security (安全閘門)</label>
+                              <label style={{ display: 'flex', alignItems: 'center', gap: '6px', cursor: 'pointer', fontSize: '12px' }}>
+                                <input 
+                                  type="checkbox" 
+                                  checked={!!cfg.require_human_approval}
+                                  onChange={e => updateConfig('require_human_approval', e.target.checked)}
+                                />
+                                <span style={{ color: cfg.require_human_approval ? '#10b981' : '#ef4444' }}>
+                                  {cfg.require_human_approval ? '✅ require_human_approval (啟動中)' : '❌ require_human_approval (已關閉)'}
+                                </span>
+                              </label>
                             </div>
                           )}
                           <div style={{ display: 'flex', flexDirection: 'column', gap: '4px', flex: 1 }}>
