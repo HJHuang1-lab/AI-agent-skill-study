@@ -51,6 +51,24 @@ export default function Day4() {
     <div className="fade-in" style={{ display: 'flex', flexDirection: 'column', minHeight: '100%', paddingBottom: '32px' }}>
       <h1>Day 4: 工具呼叫與 MCP (為 AI 裝上手腳)</h1>
       
+      {/* 🎧 語音導讀播放器 */}
+      <div className="glass-panel" style={{ 
+        padding: '16px', 
+        display: 'flex', 
+        alignItems: 'center', 
+        gap: '16px', 
+        marginBottom: '24px', 
+        background: 'rgba(59, 130, 246, 0.05)', 
+        border: '1px solid rgba(59, 130, 246, 0.2)' 
+      }}>
+        <div style={{ fontSize: '1.5rem' }}>🎙️</div>
+        <div style={{ flex: 1 }}>
+          <div style={{ fontWeight: 'bold', color: 'var(--text-primary)', marginBottom: '4px' }}>DanielHJ 語音導讀</div>
+          <div style={{ fontSize: '0.85rem', color: 'var(--text-secondary)' }}>您可以點擊播放，聆聽由此單元主講人 DanielHJ 聲音朗讀的深度教學。</div>
+        </div>
+        <audio src="/audio/day4.wav" controls style={{ height: '36px' }} />
+      </div>
+      
       {/* 5分鐘：深度教學教材區 */}
       <div style={{ marginBottom: '32px' }}>
         <p style={{ color: 'var(--text-secondary)', fontSize: '1.15rem', lineHeight: '1.8' }}>

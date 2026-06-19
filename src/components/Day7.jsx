@@ -70,6 +70,24 @@ export default function Day7() {
         <h1 style={{ fontSize: '2.5rem', fontWeight: 'bold', marginBottom: '16px', background: 'linear-gradient(90deg, #60a5fa, #c084fc)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
           Day 7: 綜合實戰與安全煞車 (Human-in-the-Loop)
         </h1>
+      
+      {/* 🎧 語音導讀播放器 */}
+      <div className="glass-panel" style={{ 
+        padding: '16px', 
+        display: 'flex', 
+        alignItems: 'center', 
+        gap: '16px', 
+        marginBottom: '24px', 
+        background: 'rgba(59, 130, 246, 0.05)', 
+        border: '1px solid rgba(59, 130, 246, 0.2)' 
+      }}>
+        <div style={{ fontSize: '1.5rem' }}>🎙️</div>
+        <div style={{ flex: 1 }}>
+          <div style={{ fontWeight: 'bold', color: 'var(--text-primary)', marginBottom: '4px' }}>DanielHJ 語音導讀</div>
+          <div style={{ fontSize: '0.85rem', color: 'var(--text-secondary)' }}>您可以點擊播放，聆聽由此單元主講人 DanielHJ 聲音朗讀的深度教學。</div>
+        </div>
+        <audio src="/audio/day7.wav" controls style={{ height: '36px' }} />
+      </div>
         <p style={{ fontSize: '1.2rem', color: 'var(--text-secondary)', lineHeight: '1.6' }}>
           賦予 Agent 強大的工具與自主思考能力後，最大的挑戰變成了「失控的風險」。
           今天我們將學習最後一塊拼圖：<Tooltip text="人工協同審查：在 AI 執行重要或高風險行動前，必須由人類進行審查與確認的安全機制">Human-in-the-Loop (HITL，人類介入)</Tooltip>。
