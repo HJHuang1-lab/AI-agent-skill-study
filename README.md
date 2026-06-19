@@ -29,6 +29,9 @@
 7. **📚 精選繁體中文延伸閱讀 (Curated Reading Resources)**
    每個單元的結尾皆嚴選 3 篇高品質的繁體中文技術文章或專業專欄（涵蓋 iThome、MakerPRO 等優質來源），幫助學員在沙盒實作後能無縫銜接深度的理論與實務應用。
 
+8. **🎧 玻璃擬物化語音導讀播放器 (Glassmorphic Audio Guide)**
+   每個單元的頂部皆整合了精美的玻璃擬物化（Glassmorphism）語音播放器。學員可以一鍵播放由單元主講人 DanielHJ 錄製的語音導讀，在閱讀教材的同時進行視覺與聽覺的雙重沉浸式學習。
+
 ---
 
 ## 📅 7 天課程與沙盒任務大綱 (Curriculum & Sandbox Missions)
@@ -63,6 +66,7 @@
 ```text
 ai-skill-study/
 ├── public/                 # 靜態資源
+│   └── audio/              # 1-7 天課程語音導讀音檔 (day1.wav - day7.wav)
 ├── src/
 │   ├── assets/             # 圖片及媒體資源
 │   ├── components/         # 核心互動元件
