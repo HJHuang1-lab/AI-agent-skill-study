@@ -29,6 +29,9 @@
 7. **📚 精選繁體中文延伸閱讀 (Curated Reading Resources)**
    每個單元的結尾皆嚴選 3 篇高品質的繁體中文技術文章或專業專欄（涵蓋 iThome、MakerPRO 等優質來源），幫助學員在沙盒實作後能無縫銜接深度的理論與實務應用。
 
+8. **🎵 課程音頻介紹 (Audio Narration)**
+   每個單元（Day 1～Day 7）均配備高品質的音頻課程介紹檔案，幫助學員在閱讀教材時能同步聆聽詳細講解，打造沉浸式的多感官學習體驗。
+
 ---
 
 ## 📅 7 天課程與沙盒任務大綱 (Curriculum & Sandbox Missions)
@@ -63,6 +66,7 @@
 ```text
 ai-skill-study/
 ├── public/                 # 靜態資源
+│   └── audio/              # 課程音頻檔案 (Day 1～Day 7)
 ├── src/
 │   ├── assets/             # 圖片及媒體資源
 │   ├── components/         # 核心互動元件
